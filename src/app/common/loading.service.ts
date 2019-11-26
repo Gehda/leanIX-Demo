@@ -25,7 +25,12 @@ export class LoadingService {
   }
 
   hideLoading() {
-    document.querySelector('.loading').remove();
+    try {
+      
+      document.querySelector('.loading').remove();
+    } catch (err) {
+      // catch err when no element is avaible
+    }
   }
 
 

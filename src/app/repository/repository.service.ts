@@ -65,12 +65,12 @@ export class RepositoryService implements  Resolve<Observable<IRepository>>{
 
 
   
-  getContributersByReponameWithOwner(nameWithOwner: string) {
+  getContributersByReponameWithOwner(nameWithOwner: string, page: number = 1) {
   /**
    * According to this: https://stackoverflow.com/questions/55055471/how-to-query-the-top-contributors-to-a-github-repository-using-graphql
    * We can't search for user via graphql --> Use api here
    */
-    return this.github.getRestGetEndpoint<IContribution[]>(`repos/${nameWithOwner}/contributors`)
+    return this.github.getRestGetEndpoint<IContribution[]>(`repos/${nameWithOwner}/contributors?page=${page}`)
   }
 
 }

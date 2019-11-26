@@ -6,6 +6,9 @@
     img{
       float: left;
       shape-outside: circle(110px at center center);
+      clip-path: circle(110px at center center);
+      margin-right: 1rem;
+      offset-path: 1rem;
       height: 200px;
       width: 200px;
     }

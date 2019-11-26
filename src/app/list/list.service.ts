@@ -25,7 +25,7 @@ export class ListService {
       `
     {
 
-      search(query: "${searchStr}", type: REPOSITORY, first: 30, after: ${pointer ? pointer : null}){
+      search(query: "${searchStr}", type: REPOSITORY, first: 30, after: ${pointer ? '"'+pointer+'"' : null}){
         repositoryCount
         pageInfo{
           startCursor
