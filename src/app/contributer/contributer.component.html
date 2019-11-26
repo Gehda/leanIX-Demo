@@ -1,0 +1,5 @@
+<img [src]="contributer.avatar_url" alt="avatar">
+<p *ngIf="contributer.site_admin">Admin</p>
+<p>{{contributer.type}}: {{contributer.login}}</p>
+<p>Contributions: {{contributer.contributions}}</p>
+<p><a [href]="contributer.html_url">Link</a></p>

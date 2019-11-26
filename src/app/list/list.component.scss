@@ -1,0 +1,67 @@
+@import '../../theme/vars';
+
+:host{
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.search{
+  height: 4rem;
+  width: 100%;
+  padding: 0 1rem;
+  label,input{
+    font-size: 1.2rem;
+    display: inline-block;
+  }
+  label{
+    position: absolute;
+    left: 0%;
+    width: 20%;
+    line-height: 4rem;
+    padding-left: 1rem;
+  }
+  input{
+    transition: .5s;
+    padding-left: 5rem;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: solid 3px lightgray;
+    &:focus{
+      outline: none;
+      border-bottom-color: $primary;
+    }
+  }
+}
+ul{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-y: auto;
+  margin-top: 2rem;
+  list-style: none;
+  li{
+    transition: .3s;
+    padding: 1rem .5rem;
+    cursor: pointer;
+    border-bottom: solid thin lightgray;
+    margin-left: 1rem;
+    span{
+      display: block;
+      font-size: .8rem;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      border-bottom: solid thin $primary;
+      margin-left: 0;
+      padding-left: 1.5rem;
+      outline: none;
+    }
+    &:active{
+      background: $primary;
+      color: white;
+    }
+  }
+}

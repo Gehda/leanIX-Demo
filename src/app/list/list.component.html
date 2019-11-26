@@ -1,0 +1,10 @@
+<div class="search">
+  <label for="search">Suche:</label>
+  <input id="search" type="text" autocomplete="off" [ngModel]="search" (ngModelChange)="triggerSearch($event)">
+</div>
+<ul>
+  <li *ngFor="let repo of repoList" [routerLink]="['/repository', repo.id]">
+    {{repo.nameWithOwner}}
+    <span>{{repo.description}}</span>
+  </li>
+</ul>

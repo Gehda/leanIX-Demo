@@ -1,0 +1,32 @@
+@import '../../theme/vars';
+
+.detail{
+  padding: 1rem;
+  .header{
+    img{
+      float: left;
+      shape-outside: circle(110px at center center);
+      height: 200px;
+      width: 200px;
+    }
+  }
+  .infos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    grid-gap: 1rem;
+    justify-items: center;
+    align-items: baseline;
+    .branch{
+      background: $primary;
+      color: white;
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+  }
+
+  .contributers{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,1 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'theme/vars';
+body, html{
+  margin: 0;
+  padding: 0;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: linear-gradient(160deg, $primary 49.5%, white 49.7%);
+  height: 100vh;
+  width: 100vw;
+  color: $text-color;
+  font-family: 'Roboto';
+}
+
+@font-face {
+  font-family: 'LigatureSymbols';
+  src: url('assets/fonts/LigatureSymbols-2.11.eot');
+  src: url('assets/fonts/LigatureSymbols-2.11.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/LigatureSymbols-2.11.woff') format('woff'),
+    url('assets/fonts/LigatureSymbols-2.11.ttf') format('truetype'),
+    url('assets/fonts/LigatureSymbols-2.11.svg#LigatureSymbols') format('svg');
+  src: url('assets/fonts/LigatureSymbols-2.11.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.lsf,
+.lsf-icon:before {
+  font-family: 'LigatureSymbols';
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+
+.loading{
+      position: absolute;
+      top: 10%;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      svg{
+        circle{
+          fill: transparent;
+          stroke: $primary;
+          stroke-width: 5px;
+          stroke-dasharray: 47px;
+          stroke-dashoffset: 0px;
+          animation: spin infinite linear 3s;
+          @keyframes spin {
+            0%{
+              stroke-dashoffset: 0px;
+            }
+            100%{
+              stroke-dashoffset: 94px;
+            }
+          }
+        }
+      }
+      p{
+        margin: 0;
+      }
+}

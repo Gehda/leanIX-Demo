@@ -1,0 +1,26 @@
+<div class="detail">
+  <div class="header">
+      <img [src]="repository.owner.avatarUrl" alt="Avatar">
+      <h2>{{repository.nameWithOwner}}</h2>
+      <h3>{{repository.description}}</h3>
+  </div>
+  <div class="infos">
+    <div class="branch">Main Branch: <b>{{repository.defaultBranchRef.name}}</b></div>
+    <div>
+      <p>Owner: <b>{{repository.owner.login}} (<a [href]="repository.owner.url">Link</a>)</b></p>
+      <p></p>
+    </div>
+    <div>Issues: {{repository.issues.totalCount}}</div>
+    <div>Forks: {{repository.forks.totalCount}}</div>
+  </div>
+  <div class="contributers">
+    <app-contributer
+    *ngFor="let contributer of contributers"
+    [contributer]="contributer"
+    ></app-contributer>
+  </div>
+  <!-- <pre>
+    {{repository | json}}
+  </pre>
+  <pre>{{contributers | json}}</pre> -->
+</div>
