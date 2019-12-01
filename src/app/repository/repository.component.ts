@@ -29,7 +29,7 @@ export class RepositoryComponent implements OnInit {
   }
 
   private _initInfiniteScroll() {
-    const main = document.querySelector('main');
+    const main = document.querySelector('main') as HTMLElement;
     let _loadingNext = false;
     console.log(this.contributers.length);
     let _hasNextPage = this.contributers.length === 30 ? true : false;

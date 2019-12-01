@@ -21,7 +21,7 @@ export class ListComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    const main = document.querySelector('main');
+    const main = document.querySelector('main') as HTMLElement;
     main.onscroll = undefined;
   }
   
@@ -46,7 +46,7 @@ export class ListComponent implements OnInit, OnDestroy {
   }
 
   private _initInfiniteLoading() {
-    const main = document.querySelector('main');
+    const main = document.querySelector('main') as HTMLElement;
     let _loadingNext = false;
     main.onscroll = (ev) => {
       const scrollPos = main.clientHeight + main.scrollTop;
